@@ -28,10 +28,10 @@ export default async function handler(req, res) {
 
     const timestamp = Date.now();
     const badgeUrl = `https://img.shields.io/badge/Visits-${visits}-${color}?v=${timestamp}`;
-    res.redirect(302, badgeUrl);
+    res.redirect(badgeUrl);
   } catch (error) {
     console.error('Error fetching visits:', error);
     const badgeUrl = `https://img.shields.io/badge/Visits-Error-red?v=${Date.now()}`;
-    res.redirect(302, badgeUrl);
+    res.redirect(badgeUrl);
   }
 }
