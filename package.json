@@ -1,0 +1,15 @@
+{
+  "name": "github-badges-api",
+  "version": "1.0.0",
+  "description": "Simple GitHub badges API for Vercel",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@vercel/kv": "^3.0.0"
+  }
+}
