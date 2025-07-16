@@ -1,6 +1,6 @@
 import { Redis } from '@upstash/redis';
 
-const redis = Resid.fromEnv();
+const redis = Redis.fromEnv();
 
 export default async function handler(req, res) {
   const { user, repo } = req.query;
