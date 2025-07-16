@@ -38,7 +38,7 @@ export default async function handler(req, res) {
 
     const color = req.query.color || 'blue';
 
-    const badgeUrl = `https://img.shields.io/badge/Years%20on%20GitHub-${years}-${color}`;
+    const badgeUrl = `https://img.shields.io/badge/Years-${years}-${color}`;
     res.redirect(302, badgeUrl);
 
   } catch (error) {
