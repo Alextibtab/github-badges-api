@@ -1,4 +1,6 @@
-import { kv } from '@vercel/kv';
+import { Redis } from '@upstash/redis';
+
+const redis = Resid.fromEnv();
 
 export default async function handler(req, res) {
   const { user, repo } = req.query;
@@ -17,7 +19,7 @@ export default async function handler(req, res) {
   try {
     const key = `visits:${user}:${repo}`;
 
-    const visits = await kv.incr(key);
+    const visits = await redis.incr(key);
 
     const color = req.query.color || 'blue';
 
